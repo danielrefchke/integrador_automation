@@ -48,4 +48,14 @@ public class DynamicElement {
 
         return DriverManager.getDriver().findElement(elementBy);
     }
+
+    /**
+     * La función waitHide() espera hasta que
+     * el elemento web ya no sea visible.
+     */
+    public void waitHide() {
+        this.wait.until(
+                ExpectedConditions.invisibilityOf(this.getWebElement()));
+
+    }
 }
