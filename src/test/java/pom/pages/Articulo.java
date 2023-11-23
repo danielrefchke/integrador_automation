@@ -7,6 +7,11 @@ import base.DynBy;
 import base.DynamicElement;
 import base.Page;
 
+/**
+ * Representa a la pagina que permite configurar un articulo
+ * 
+ * @author Daniel Refchke
+ */
 public class Articulo extends Page {
     @DynBy(id = "option-label-size-143-item-169")
     private DynamicElement size;

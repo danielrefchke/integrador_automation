@@ -7,6 +7,11 @@ import base.DynBy;
 import base.DynamicElement;
 import base.Page;
 
+/**
+ * Representa la pagina para configurar el envio
+ * 
+ * @author Daniel Refchke
+ */
 public class Shipping extends Page {
 
     @DynBy(id = "customer-email")

@@ -11,6 +11,13 @@ import pom.services.pageservices.ShippingService;
 import pom.services.pageservices.ThanksService;
 import pom.services.pageservices.VerificaCarroService;
 
+/**
+ * Test para la pagina https://magento.softwaretestingboard.com/
+ * donde se realiza una compra determinada, se completan los datos
+ * de shipping y se confirma la compra
+ * 
+ * @author Daniel Refchke
+ */
 public class Integrador extends BaseTest {
 
     public Integrador() {

@@ -7,6 +7,11 @@ import base.DynBy;
 import base.DynamicElement;
 import base.Page;
 
+/**
+ * Representa la pagina final de todo el proceso
+ * 
+ * @author Daniel Refchke
+ */
 public class Thanks extends Page {
     @FindBy(xpath = "//span[@class='base']")
     private WebElement title;

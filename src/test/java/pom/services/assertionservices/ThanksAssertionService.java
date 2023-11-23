@@ -3,14 +3,21 @@ package pom.services.assertionservices;
 import base.AssertionProxi;
 import pom.pages.Thanks;
 
+/**
+ * Representa la secuencia de pruebas sobre
+ * la pagina final
+ * 
+ * @author Daniel Refchke
+ */
 public class ThanksAssertionService {
     public void test(Thanks thanks) {
-        /*- El título es igual a “Thank you for purchase!”
-        - El botón “Continue Shopping” está habilitado.
-        - El botón “Create an Account” está visible.
-        - El número de la orden (Your order # is:) es un número (en la captura de
-        ejemplo es el 000026889). Pista, mediante el método split() de la clase
-        String, podrá separar todo el texto en palabras.
+        /*
+         * Las validaciones son las siguientes:
+         * -El título es igual a “Thank you for your purchase!”
+         * (en el enunciado decia Thank you for purchase!)
+         * - El botón “Continue Shopping” está habilitado.
+         * - El botón “Create an Account” está visible.
+         * - El número de la orden (Your order # is:) es un número
          */
 
         testBotonContinue(thanks);
@@ -19,17 +26,32 @@ public class ThanksAssertionService {
         testTitle(thanks);
     }
 
+    /**
+     * Prueba que el botón “Continue Shopping” está habilitado.
+     * 
+     * @param thanks pagina sobre la que se hace la validacion
+     */
     public void testBotonContinue(Thanks thanks) {
         AssertionProxi.isEnabled(
                 thanks.getBtnContinueShoping(),
                 "El boton continue shopping no esta habilitado");
     }
 
+    /**
+     * El botón “Create an Account” está visible.
+     * 
+     * @param thanks pagina sobre la que se hace la validacion
+     */
     public void testBotonCreateAccount(Thanks thanks) {
         AssertionProxi.isVisible(thanks.getBtnCreateAccount(),
                 "El boton create account no es visible");
     }
 
+    /**
+     * El título es igual a “Thank you for your purchase!”
+     * 
+     * @param thanks pagina sobre la que se hace la validacion
+     */
     public void testTitle(Thanks thanks) {
         AssertionProxi.isEqual(
                 thanks.getTitle().getText(),
@@ -37,6 +59,11 @@ public class ThanksAssertionService {
                 "El Titulo no es “Thank you for your purchase!”");
     }
 
+    /**
+     * El número de la orden (Your order # is:) es un número
+     * 
+     * @param thanks pagina sobre la que se hace la validacion
+     */
     public void testNroOrden(Thanks thanks) {
         AssertionProxi.isNumeric(
                 thanks.getNroOrden().getText(),
