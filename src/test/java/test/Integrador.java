@@ -3,6 +3,7 @@ package test;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import base.DriverManager;
 import pom.services.assertionservices.ThanksAssertionService;
 import pom.services.pageservices.ArticuloService;
 import pom.services.pageservices.HomeService;
@@ -50,8 +51,7 @@ public class Integrador extends BaseTest {
 
     @Override
     public void init() {
-        // inicializaciones, como ir al home
-        // pero en este caso no es necesario
+        DriverManager.getDriver().manage().window().maximize();
     }
 
 }
