@@ -37,6 +37,9 @@ Validaciones:
 Punto de acceso a las pruebas:
     src/test/java/test/Integrador.java
 
+Probado en:
+    Firefox y chrome sobre Debian (linux)
+
 Librerias:
     El paquete src/test/java/base contiene las clases que conforman el framework de las pruebas.
 

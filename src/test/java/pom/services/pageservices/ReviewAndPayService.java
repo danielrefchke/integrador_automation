@@ -14,6 +14,9 @@ public class ReviewAndPayService {
      * confirma la operacion
      */
     public void confirmar() {
+        // esperamos que el loader se esfume
+        reviewAndPay.getLoader().waitHide();
+        // y damos click
         reviewAndPay.getBtnContinuar().click();
     }
 }

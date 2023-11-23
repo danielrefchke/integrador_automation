@@ -13,10 +13,17 @@ import base.Page;
  */
 public class VerificaCarro extends Page {
 
-    @DynBy(xpath = "//li/button[@title='Proceed to Checkout']")
+    @DynBy(xpath = "//button[@data-role='proceed-to-checkout']")
     DynamicElement btnProceder;
 
+    // elemento de espera, en firefox esta parte da problemas
+    @DynBy(xpath = "//th[@class='mark']/strong")
+    DynamicElement espera;
+
     public WebElement getBtnProceder() {
+        // esperamos a que el elemento aparezca
+        espera.getWebElement();
+        // y retornamos el boton
         return btnProceder.getWebElement();
     }
 

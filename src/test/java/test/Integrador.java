@@ -21,7 +21,8 @@ import pom.services.pageservices.VerificaCarroService;
 public class Integrador extends BaseTest {
 
     public Integrador() {
-        super("chrome", "https://magento.softwaretestingboard.com/");
+        super("firefox", "https://magento.softwaretestingboard.com/");
+        // super("chrome", "https://magento.softwaretestingboard.com/");
     }
 
     @Test
