@@ -1,5 +1,6 @@
 package base;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class AssertionProxi {
@@ -31,6 +32,12 @@ public class AssertionProxi {
                 message);
     }
 
+    public static void isNumeric(String value, String message) {
+        Assert.assertTrue(
+                value.matches("\\d+"),
+                message);
+    }
+
     public static void isGreater(int value1, int value2, String message) {
         Assert.assertTrue(
                 value1 > value2,
@@ -49,5 +56,13 @@ public class AssertionProxi {
 
     public static void notIsNull(Object o, String message) {
         Assert.assertNotNull(o, message);
+    }
+
+    public static void isEnabled(WebElement element, String message) {
+        Assert.assertTrue(element.isEnabled(), message);
+    }
+
+    public static void isVisible(WebElement element, String message) {
+        Assert.assertTrue(element.isDisplayed(), message);
     }
 }
